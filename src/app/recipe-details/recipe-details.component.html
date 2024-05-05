@@ -1,0 +1,18 @@
+<p>שם , קטגוריה+ אייקון
+    , דרגת קושי – הציגי כוכביות לפי הדרגה,
+    תמונה, הרכיבים כאשר לפי כל רכיב אייקון כלשהו,
+    אופן ההכנה – מספרי את הפעולות, </p>
+
+
+<h1>{{this.recipe.Name}}</h1>
+<img src="../../assets/images/{{this.recipe.Image}}" />
+<p>זמן הכנה: {{this.recipe.PreparationTimeInMinute|time}}</p>
+<h1>{{this.recipe.Level|levelStars}}</h1>
+<p>,נוסף בתאריך:{{this.recipe.AddDate}}</p>
+<h3 *ngFor="let a of this.recipe.Layers">{{a.Description}}
+    <p *ngFor="let b of a.Components">{{b}}</p>
+</h3>
+<h2>הוראות:</h2>
+<ul>
+    <li *ngFor="let a of this.recipe.Prepretion">{{a}}</li>
+</ul>

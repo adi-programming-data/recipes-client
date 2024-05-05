@@ -1,0 +1,12 @@
+<form (ngSubmit)="login(name.value,password.value);">
+    <label>הקש שם</label>
+    <input type="text" #name required />
+    <br/>
+    <label>הקש סיסמא</label>
+    <input type="password" #password required autocomplete="off" />
+    <input type="submit" />
+</form>
+
+<!-- action="recipeList" -->
+<!-- disabled="!myForm.valid" -->
+<!-- (ngSubmit)="login(name.value,password.value);" -->

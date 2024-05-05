@@ -1,0 +1,4 @@
+<div class="list">
+    <app-small-recipe *ngFor="let x of  recipeService.recipesArr" [item]="x" (click)="viewRecipe(x) "></app-small-recipe>
+</div>
+

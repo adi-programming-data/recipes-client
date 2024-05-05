@@ -1,0 +1,30 @@
+<form (ngSubmit)="addRecipe()">
+    <label>הקש שם מתכון</label>
+    <input type="text" name="name" [(ngModel)]="newRecipe.Name"><input>
+    <label>נתיב תמונה</label>
+    <input type="text" name="img" [(ngModel)]="newRecipe.Image"><input>
+    <label>קטגוריה</label>
+    <select name="cat" [(ngModel)]="cat">
+        <option value="" *ngFor="let x of categoriesArr">{{x.Name}}</option>
+    </select>
+    <label>זמן הכנה</label>
+    <input type="number" name="timeprep" [(ngModel)]="newRecipe.PreparationTimeInMinute"><input>
+    <label>דרגת קושי</label>
+    <input type="number" name="level" [(ngModel)]="newRecipe.Level"><input>
+    <div>
+        <label>שם שכבה</label>
+        <input type="text" #lay><input>
+        <input type="button" (click)="addLayer(lay.value)">+<input>
+
+        <label>הוסף מוצר</label>
+        <input type="text" #ingred><input>
+        <input type="button" (click)="addIngredient(ingred.value)">+<input>
+
+    </div>
+    <label>הוסף הוראה</label>
+    <input type="text" #inst><input>
+    <input type="button" (click)="addInstruction(inst.value)">+<input>
+
+    <input type="submit" />
+</form>
+

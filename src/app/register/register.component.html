@@ -1,0 +1,17 @@
+<form (ngSubmit)="register()" #form>
+    <label for="name"></label>
+    <input type="text" name="name" #name required [(ngModel)]="empty.Name" />
+    <br/>
+    <label for="">מייל</label>
+    <br/>
+    <input type="email" name="mail" #mail [(ngModel)]="empty.Mail" />
+    <label for="mail">כתובת</label>
+    <input type="text" name="address" #address [(ngModel)]="empty.Address"/>
+    <br/>
+    <label for="password">סיסמה</label>
+    <input type="password" name="password" [(ngModel)]="empty.Password" />
+<br/>
+    <input type="submit" onclick="Register()" value="אישור" />
+</form>
+
+
